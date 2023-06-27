@@ -1,0 +1,125 @@
+ 
+
+
+                        Contact Management System
+
+1 Create a project - ng new ContactApp (project_name)
+2 cd ContactApp 
+3 code .
+4 Project Run - ng serve --open
+5 clear src/app/app.component.html file
+6 Install Bootstrap fontawesome and google fonts
+  -> Install bootstrap - npm i bootstrap and copy paste the links in index.html
+  -> Install fontawesome - npm install --save @fortawesome/fontawesome-free and copy paste the links in index.html
+  ->configure  - To avoid site down issues
+        In angular.json
+7 Create Component 
+    ->Contact Manager- ng g c contactManager
+    ->Add Contact - ng g c addContact
+    ->UpdateContact - ng g c updateContact
+    ->View Contact - ng g c viewContact
+
+8 Setup path for each component that we needed to display in web pages
+    -> app-routing.module.ts , 
+    Routes[
+      //http://localhost:4200 -> '' path for redirection -- http://localhost:4200/contact/admin
+  {
+    path:'',redirectTo:'contact/admin',pathMatch:'full'
+  },
+  {
+    //path for contact manager
+    path:'contact/admin',component:ContactManagerComponent
+
+  }
+    ]
+  9 Components design
+
+  10 Api creation for fetching data
+
+  11 Create a Folder for Server and db.json file(src/server/db.json)
+  12 Create contact  data add add to db.json file(json data)
+  13 Server run  
+    ->cd src
+    ->cd server
+    ->npm init - for creating package.json
+    ->npm i json-server
+    ->Edit package.json file as 
+        "scripts": {
+                 "start": "json-server --watch db.json --port 3000"
+            },
+    ->npm start
+
+14 create Model for Conatct and Group
+       ->src/models/myContact.ts
+       ->src/models/myGroup.ts
+
+15 Data fetching
+    
+    Javascript -promise     ->     .then()         .catch()
+    TypeScript -Observable  ->    .subscribe()    .catch() 
+
+16 Services
+
+     Pass data from one component to another.
+     If two component share same data then we used to create a new service
+
+     Create a new service - ng g s service_name
+
+      Create a new service Api Services - ng g s services/api
+
+17 HttpClientModule - For using http methods 
+
+    -> import  HttpClientModule  in app.module.ts 
+
+18 Dependency Injection
+
+  Data sharing between two dependent classes
+  ->Perform inside the constructor
+  ->constructor executes first
+  Syntax : access specifier  variable_name : class_name
+
+  constructor(access specifier  variable_name : class_name){}
+
+19 Data Binding - Data sharing inside a component
+
+    1)One way data binding - Data passes through one direction
+
+        a)Component to view (ts->html)
+
+            i)String interpolation  - {{variable_name}}  - (html)
+
+            ii)Property binding -[attribute_name]="Property_name"
+
+        b)View to component (html->ts)
+            i)Event binding - (event)="function_name()"
+                 js Onclick 
+                  ts (click)
+            ii)Event binding usingn $event -(event)="function_name($event)"
+
+
+    2)Two way data binding - Data passes through two directions (ts->html and html->ts)
+        ngModel -> [(ngModel)]="Property_name"
+        ->imports formsmodule in app.module.ts (ngModel)
+        ->form  i/p tag- name attribute must
+
+20 Directives - To Manipulate DOM
+
+    1)Component Directives 
+    2)Structural Directives
+        i)*ngIf -  *ngIf="Condition"
+        ii)*ngFor   *ngFor="let variable_name of array_name"
+
+21) Activated Route
+    It provides access to information about a route associated with a component 
+    that is loaded in an outlet
+
+    parameters
+    ->url
+    ->params - An observable of the matrix parameters scoped to this route. 
+
+22) Pipes
+    Pipes are simple functions to use in template expressions to accept an input value and return a transformed value.
+    
+    Create  a pipe in angular - ng g p pipe_folder/pipe_name
+
+      Searching - ng g p pipes/filter

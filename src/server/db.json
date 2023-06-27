@@ -1,0 +1,48 @@
+{
+  "contacts": [
+    {
+      "id": "c3",
+      "name": "Ann Luke",
+      "phone": "9696969696",
+      "email": "ann@gmail.com",
+      "photo": "https://cdn3.iconfinder.com/data/icons/avatars-business-human1/180/woman1-512.png",
+      "company": "UV company",
+      "title": "HR",
+      "groupId": "1"
+    },
+    {
+      "groupId": "2",
+      "id": "4544",
+      "name": "John Sv",
+      "phone": "09898989898",
+      "email": "John@gmail.com",
+      "company": "mc company",
+      "photo": "https://th.bing.com/th/id/R.6b0022312d41080436c52da571d5c697?rik=Ql6UUNosrWAY0w&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fpng-user-icon-icons-logos-emojis-users-2400.png&ehk=8agkVrs8bo9zafVF9Qk4%2bFqv5IwaEZrb8DwX%2ftfJtNc%3d&risl=&pid=ImgRaw&r=0",
+      "title": "tgth"
+    },
+    {
+      "groupId": "3",
+      "photo": "https://th.bing.com/th/id/R.6b0022312d41080436c52da571d5c697?rik=Ql6UUNosrWAY0w&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fpng-user-icon-icons-logos-emojis-users-2400.png&ehk=8agkVrs8bo9zafVF9Qk4%2bFqv5IwaEZrb8DwX%2ftfJtNc%3d&risl=&pid=ImgRaw&r=0",
+      "id": "45444",
+      "name": "Anu",
+      "phone": "07907010588",
+      "email": "John@gmail.com",
+      "company": "mc company",
+      "title": "tgth"
+    }
+  ],
+  "groups": [
+    {
+      "id": "1",
+      "name": "family"
+    },
+    {
+      "id": "2",
+      "name": "friends"
+    },
+    {
+      "id": "3",
+      "name": "Company"
+    }
+  ]
+}

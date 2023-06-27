@@ -1,0 +1,43 @@
+<div class="container">
+    <!-- add contact intro -->
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center text-primary mt-4">View Contact <i class="fa-solid fa-eye"></i> </h1>
+            <p style="text-align: justify;">
+                Contact management is the process of recording contacts’ details and tracking their interactions with a
+                business. Such systems have gradually evolved into an aspect of customer relationship management (CRM)
+                systems
+            </p>
+        </div>
+    </div>
+    <!-- <pre>
+        {{contact|json}}
+    </pre> -->
+
+    <!-- add contact form with image -->
+    <div class="row">
+        <!-- form -->
+        <div class="col-6">
+
+            <!-- list -->
+            <ul class="list-group">
+                <li class="list-group-item active text-center" aria-current="true">Contact Details</li>
+                <li class="list-group-item">Id :{{contact.id}}</li>
+                <li class="list-group-item">Name : {{contact.name}}</li>
+                <li class="list-group-item">Phone no :{{contact.phone}}</li>
+                <li class="list-group-item">Email : {{contact.email}}</li>
+                <li class="list-group-item"> Company :{{contact.company}}</li>
+                <li class="list-group-item">Title:{{contact.title}}</li>
+                <li class="list-group-item">Group:{{groupName}}</li>
+              </ul>
+        </div>
+        <!-- image -->
+        <div class="col-6">
+            <img [src]="contact.photo" width="100%" height="350px" alt="">
+        </div>
+
+    </div>
+
+    <button class="btn btn-success mb-3" routerLink="">Go Back</button>
+</div>
+
